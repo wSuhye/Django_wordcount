@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style = "color :orange;">입력한 텍스트는 {{ length }}단어 입니다.</h1>
+    <a href="{% url 'home' %}">다시하기</a>
+    <h1 style="color:orange;">입력받은 텍스트</h1>
+    <h4>{{ text }}</h4>
+    <h1 style = "color:orange;">결과</h1>
+    <ul>
+        {% for i in word %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+    <!-- #sep='\n'하면 줄바꿈 --근데 안되넹>
+    for i in {{ word }}:
+     | linebreaksbr 도 아무변화 없음
+
+    
+</body>
+</html>
